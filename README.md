@@ -186,6 +186,97 @@ TextView에 내용을 적는 칸
 </LinearLayout>
 
 ```
+# Button Event
+
+# 버튼 이벤트
+
+```xml
+<Button
+android:id="@+id/btn_prev"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="이전"
+android:backgroundTint="#4CAF50"
+android:layout_margin="2dp"
+android:textColor="@color/black"/>
+```
+
+id 지정해준 다음
+
+`Button **btn_prev**, **btn_next**, **btn_exit**; *//선언*`
+
+```java
+btn_prev= findViewById(R.id.btn_prev);
+btn_next= findViewById(R.id.btn_next);
+btn_exit= findViewById(R.id.btn_exit);//연결
+```
+
+```java
+btn_prev.setOnClickListener(this);
+btn_next.setOnClickListener(this);
+btn_exit.setOnClickListener(this);//리스너등록
+```
+
+```java
+@Override
+public voidonClick(View view) {//이벤트처리
+switch(view.getId()){
+caseR.id.btn_prev:
+            Toast.makeText(this,"이전 버튼 클릭.", Toast.LENGTH_SHORT).show();
+break;
+caseR.id.btn_next:
+            String str_id =edit_id.getText().toString();
+            String str_pwd =edit_pwd.getText().toString();
+
+if(str_id.length()<1 || str_pwd.length()<1)
+                Toast.makeText(this,"아아디와 비번을 확인하세요.", Toast.LENGTH_SHORT).show();
+else
+Toast.makeText(this,"아아디는 "+str_id+"이고,비번은 "+str_pwd+"입니다.", Toast.LENGTH_SHORT).show();
+break;
+caseR.id.btn_exit:
+            Toast.makeText(this,"종료 버튼 클릭.", Toast.LENGTH_SHORT).show();
+break;
+    }
+}
+```
+
+이런식으로 이벤트 처리를 할 수 있다.
+
+![Untitled](Button%20Event%20dd26c82973fb4e449b890db2bb36d45e/Untitled.png)
+
+# Edit Text
+
+```xml
+<EditText
+android:id="@+id/edit_id"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="아이디"/>
+<EditText
+android:id="@+id/edit_pwd"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:inputType="numberPassword"
+android:hint="비밀번호"/>
+```
+
+이런식으로 html input처럼 쓰면된다.
+
+`EditText **edit_id**, **edit_pwd**;`
+
+```java
+edit_id= findViewById(R.id.edit_id);
+edit_pwd= findViewById(R.id.edit_pwd);
+```
+
+```java
+String str_id =edit_id.getText().toString();
+String str_pwd =edit_pwd.getText().toString();
+```
+
+이런식으로 입력받은걸 변수에 넣을 수 있다.
+
+![Untitled](Button%20Event%20dd26c82973fb4e449b890db2bb36d45e/Untitled%201.png)
 
 ![Untitled](Widget%2028608b879e36418cba14a0290e1388c8/Untitled.png)
 
