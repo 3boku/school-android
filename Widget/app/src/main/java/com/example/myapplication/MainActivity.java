@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else
                     Toast.makeText(this, "아아디는 "+str_id+"이고, 비번은 "+str_pwd+"입니다.", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.btn_exit:ㅁㄴ
+            case R.id.btn_exit:
                 Toast.makeText(this, "종료 버튼 클릭.", Toast.LENGTH_SHORT).show();
                 break;
         }
