@@ -40,10 +40,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.resetButton:
                 count = 0;
                 number.setText(count+"");
+                Log.i("onCLick", "리셋된 숫자는 " + count);
                 break;
             case R.id.plusButton:
                 count++;
                 number.setText(count+"");
+                Log.i("onCLick", "플러스된 숫자는 " + count);
                 break;
         }
     }
