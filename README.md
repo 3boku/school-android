@@ -276,6 +276,95 @@ String str_pwd =edit_pwd.getText().toString();
 
 이런식으로 입력받은걸 변수에 넣을 수 있다.
 
+# Number Counter
+
+```xml
+<TextView
+android:id="@+id/numberTextView"
+android:layout_width="match_parent"
+android:layout_height="300dp"
+android:text="100"
+android:textSize="100sp"
+android:textStyle="bold|italic"
+android:gravity="center"
+android:textColor="@color/blue"
+/>
+```
+
+TextView를 설정한다.
+
+```xml
+<Button
+android:id="@+id/resetButton"
+android:layout_width="0dp"
+android:layout_weight="1"
+android:layout_height="wrap_content"
+android:text="초기화"
+android:backgroundTint="@color/blue"
+android:layout_margin="10dp"
+/>
+```
+
+리니어 레이아웃안에 버튼을 두개 만들어서 레이아웃을 구성했다.
+
+![Untitled](Number%20Counter%20ff0ae03456d4478cb86c6e8cd15ae76e/Untitled.png)
+
+이때 color.xml를 수정해서 만들었다. (like global.css)
+
+```xml
+<?xml version="1.0"encoding="utf-8"?>
+<resources>
+    <colorname="purple_200">#FFBB86FC</color>
+    <colorname="purple_500">#FF6200EE</color>
+    <colorname="purple_700">#FF3700B3</color>
+    <colorname="teal_200">#FF03DAC5</color>
+    <colorname="teal_700">#FF018786</color>
+    <colorname="black">#FF000000</color>
+    <colorname="white">#FFFFFFFF</color>
+    <colorname="blue">#2196F3</color>
+</resources>
+```
+
+이제 자바로 가서
+
+```java
+Button reset,plus;
+int count=0; //카운터에서 사용할 변수
+TextView number;
+```
+
+변수를 지정한다.
+
+```java
+reset= findViewById(R.id.resetButton);
+plus= findViewById(R.id.plusButton);
+number= findViewById(R.id.numberTextView);
+
+reset.setOnClickListener(this);
+plus.setOnClickListener(this);
+```
+
+변수를 레이아웃에 버튼과 텍스트와 연결하고
+
+버튼의 리스너를 추가한다.
+
+```java
+switch(view.getId()){
+	caseR.id.resetButton:
+		count= 0;
+		number.setText(count+"");
+		break;
+	caseR.id.plusButton:
+		count++;
+		number.setText(count+"");
+		break;
+}
+```
+
+![Untitled](Number%20Counter%20ff0ae03456d4478cb86c6e8cd15ae76e/Untitled%201.png)
+
+이렇게 이렇게 카운터가 잘 동작한다.
+
 ![Untitled](Button%20Event%20dd26c82973fb4e449b890db2bb36d45e/Untitled%201.png)
 
 ![Untitled](Widget%2028608b879e36418cba14a0290e1388c8/Untitled.png)
