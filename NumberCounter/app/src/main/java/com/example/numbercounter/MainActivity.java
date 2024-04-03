@@ -17,11 +17,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button reset, plus;
-
-
     int count=0;
-
-
     TextView number; // EditText
 
     @Override
@@ -41,14 +37,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.plusButton:
-                Log.d(TAG, "onClick: btnAdd : "+view.getClass().getName());
-                count++;
+            case R.id.resetButton:
+                count = 0;
                 number.setText(count+"");
                 break;
-            case R.id.resetButton:
-                Log.d(TAG, "onClick: btnAdd : "+view.getClass().getName());
-                count = 0;
+            case R.id.plusButton:
+                count++;
                 number.setText(count+"");
                 break;
         }
