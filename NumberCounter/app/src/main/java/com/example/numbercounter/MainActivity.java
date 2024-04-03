@@ -1,14 +1,56 @@
 package com.example.numbercounter;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Button reset, plus;
+
+
+    int count=0;
+
+
+    TextView number; // EditText
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        reset = findViewById(R.id.resetButton);
+        plus = findViewById(R.id.plusButton);
+        number = findViewById(R.id.numberTextView);
+
+        reset.setOnClickListener(this);
+        plus.setOnClickListener(this);
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.plusButton:
+                Log.d(TAG, "onClick: btnAdd : "+view.getClass().getName());
+                count++;
+                number.setText(count+"");
+                break;
+            case R.id.resetButton:
+                Log.d(TAG, "onClick: btnAdd : "+view.getClass().getName());
+                count = 0;
+                number.setText(count+"");
+                break;
+        }
     }
 }
