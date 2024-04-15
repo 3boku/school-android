@@ -42,21 +42,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int height = Integer.parseInt(str_height);
         int weight = Integer.parseInt(str_weight);
 
-        double bmi = weight / Math.pow(height/100, 2.0);
+        double bmi = weight / Math.pow(height/100.0, 2.0);
         resultText.setVisibility(View.VISIBLE);
         if(bmi >= 35){
             resultText.setText("고도비만");
         }
-        else if(bmi >= 30 && bmi <= 34.9){
+        else if(bmi >= 30){
             resultText.setText("중정도비만");
         }
-        else if(bmi >= 25 && bmi <= 29.9){
+        else if(bmi >= 25){
             resultText.setText("경도비만");
         }
-        else if(bmi >= 23 && bmi <= 24.4){
+        else if(bmi >= 23){
             resultText.setText("과체중");
         }
-        else if(bmi >= 18.5 && bmi <= 22.9){
+        else if(bmi >= 18.5){
             resultText.setText("정상체중");
         }
         else if(bmi < 18.5) {
