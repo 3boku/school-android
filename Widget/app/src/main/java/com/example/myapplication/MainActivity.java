@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "이전 버튼 클릭.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_next:
-                String str_id = edit_id.getText().toString();
-                String str_pwd = edit_pwd.getText().toString();
+                ㅁㄴ
 
                 if (str_id.length()<1 || str_pwd.length()<1)
                     Toast.makeText(this, "아아디와 비번을 확인하세요.", Toast.LENGTH_SHORT).show();
