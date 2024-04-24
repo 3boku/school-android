@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*">
+
+    <TableRow>
+
+        <Button
+            android:layout_margin="2dp"
+            android:backgroundTint="#FFEB3B"
+            android:text="성명"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_margin="2dp"
+            android:backgroundTint="#CDDC39"
+            android:text="국어"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_margin="2dp"
+            android:backgroundTint="#FF5722"
+            android:text="수학"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_margin="2dp"
+            android:backgroundTint="#00BCD4"
+            android:text="총점"
+            android:textColor="@color/black" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="홍길동" />
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="90" />
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="80" />
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="170" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="이순신" />
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="80" />
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="100" />
+
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="180" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:gravity="center"
+            android:text="합계"
+            android:layout_span="3"/>
+
+        <TextView
+            android:gravity="center"
+            android:text="350" />
+    </TableRow>
+
+</TableLayout>
