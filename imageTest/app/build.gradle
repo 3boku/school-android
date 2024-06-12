@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.shape'
+    namespace 'com.example.imagetest'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.shape"
+        applicationId "com.example.imagetest"
         minSdk 24
         targetSdk 33
         versionCode 1
