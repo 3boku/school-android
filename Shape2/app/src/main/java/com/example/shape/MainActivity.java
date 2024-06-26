@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         binding.startImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                for(int i = 0; i < resultImage.length; i++)
+                    resultImage[i].setVisibility(View.GONE);
+
                 Intent intent = new Intent(MainActivity.this, SubActivity.class);
 
                 if(binding.radioButton1.isChecked()){
@@ -71,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
                                 resultImage[num].setImageResource(drawblId[i]);
                                 num++;
                             }
+                        }
+
+                        if(binding.radioButton1.isChecked() && selectResult[0]==1 && selectResult[1]==1) {
+                            binding.textViewResult.setText("맞았습니다.");
+                        } else if(binding.radioButton2.isChecked() && selectResult[2]==1 && selectResult[3]==1) {
+                            binding.textViewResult.setText("맞았습니다");
+                        } else {
+                            binding.textViewResult.setText("틀렸습니다.");
                         }
 
                     }
