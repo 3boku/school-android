@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="1500원"
+            android:text="단가*수량"
             android:textColor="#C62E2E"
             android:textSize="20dp" />
 

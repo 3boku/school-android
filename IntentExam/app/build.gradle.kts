@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.animalshop"
+    namespace = "com.example.intentexam"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.animalshop"
+        applicationId = "com.example.intentexam"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -26,8 +26,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
-    viewBinding{
+    viewBinding {
         enable = true
     }
 }
